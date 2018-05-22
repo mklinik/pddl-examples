@@ -1,3 +1,4 @@
+; In order to make coffee, water and beans must be filled first
 (define (domain coffee)
   (:requirements :strips)
 

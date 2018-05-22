@@ -1,3 +1,4 @@
+; Three actions, completely independent
 (define (domain ordering)
   (:requirements :strips)
 
