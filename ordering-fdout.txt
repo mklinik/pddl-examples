@@ -1,0 +1,119 @@
+INFO     Running translator.
+INFO     translator input: ['ordering-domain.pddl', 'ordering-prob01.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     callstring: /usr/bin/python /home/mkl/radboud/src/planningAndScheduling/fast-downward/builds/release32/bin/translate/translate.py ordering-domain.pddl ordering-prob01.pddl
+Parsing...
+Parsing: [0.000s CPU, 0.001s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.000s CPU, 0.000s wall-clock]
+Preparing model... [0.000s CPU, 0.000s wall-clock]
+Generated 4 rules.
+Computing model... [0.000s CPU, 0.000s wall-clock]
+7 relevant atoms
+0 auxiliary atoms
+7 final queue length
+8 total queue pushes
+Completing instantiation... [0.000s CPU, 0.000s wall-clock]
+Instantiating: [0.000s CPU, 0.001s wall-clock]
+Computing fact groups...
+Finding invariants...
+3 initial candidates
+Finding invariants: [0.000s CPU, 0.000s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+3 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.001s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.000s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+1 operators removed
+0 axioms removed
+2 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.000s wall-clock]
+Reordering and filtering variables...
+2 of 2 variables necessary.
+0 of 0 mutex groups necessary.
+2 of 2 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
+Translator variables: 2
+Translator derived variables: 0
+Translator facts: 4
+Translator goal facts: 2
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 2
+Translator axioms: 0
+Translator task size: 12
+Translator peak memory: 27240 KB
+Writing output... [0.000s CPU, 0.000s wall-clock]
+Done! [0.000s CPU, 0.004s wall-clock]
+INFO     Running search (release32).
+INFO     search input: output.sas
+INFO     search arguments: ['--search', 'astar(blind())']
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search executable: /home/mkl/radboud/src/planningAndScheduling/fast-downward/builds/release32/bin/downward
+INFO     callstring: /home/mkl/radboud/src/planningAndScheduling/fast-downward/builds/release32/bin/downward --search 'astar(blind())' --internal-plan-file sas_plan < output.sas
+reading input... [t=3.2738e-05s]
+done reading input! [t=0.000122823s]
+packing state variables...done! [t=0.000139652s]
+Variables: 2
+FactPairs: 4
+Bytes per state: 4
+Building successor generator...done! [t=0.00021345s]
+peak memory difference for root successor generator creation: 0 KB
+time for root successor generation creation: 5.38e-06s
+done initializing global data [t=0.000260386s]
+Initializing blind search heuristic...
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for blind: 1
+[g=0, 1 evaluated, 0 expanded, t=0.000465664s, 3880 KB]
+f = 1 [1 evaluated, 0 expanded, t=0.000508257s, 3880 KB]
+Initial heuristic value for blind: 1
+pruning method: none
+f = 2 [3 evaluated, 1 expanded, t=0.000569993s, 3880 KB]
+New best heuristic value for blind: 0
+[g=2, 4 evaluated, 2 expanded, t=0.000620255s, 3880 KB]
+Solution found!
+Actual search time: 0.000120828s [t=0.000679459s]
+set-p1  (1)
+set-p2  (1)
+Plan length: 2 step(s).
+Plan cost: 2
+Expanded 3 state(s).
+Reopened 0 state(s).
+Evaluated 4 state(s).
+Evaluations: 4
+Generated 4 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 1 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 3 state(s).
+Generated until last jump: 2 state(s).
+Number of registered states: 4
+Int hash set load factor: 4/4 = 1
+Int hash set resizes: 2
+Search time: 0.000246417s
+Total time: 0.000685764s
+Solution found.
+Peak memory: 3880 KB
