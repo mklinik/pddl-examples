@@ -9,19 +9,11 @@
   )
 
   (:action fill-water
-    :parameters
-      ()
-    :precondition
-      (not (has-water))
     :effect
       (has-water)
   )
 
   (:action fill-beans
-    :parameters
-      ()
-    :precondition
-      (not (has-beans))
     :effect
       (has-beans)
   )
