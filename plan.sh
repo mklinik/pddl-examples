@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ $# -ne 2 ] ;
+then
+    echo "usage: $0 <domain.pddl> <problem.pddl>"
+    exit 1
+fi
+
+DOMAINFILE="$1"
+PROBFILE="$2"
+
+# use fast-downward to make a plan
+fast-downward.py "$DOMAINFILE" "$PROBFILE" --search "astar(blind())"
+
+# remove the last line in sas_plan
+sed -i '$d' sas_plan
+
+# run the KK algorithm to get a plan deordering 
+python ~/radboud/src/planningAndScheduling/pop-gen/lifter.py \
+    -domain "$DOMAINFILE" \
+    -prob "$PROBFILE" \
+    -mercout sas_plan DOT > result.dot
+
+# only take the DOT output of lifter
+sed -ni '/digraph/,$p' result.dot
+
+# make svg image from dot file
+dot -Tsvg result.dot > result.svg
